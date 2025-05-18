@@ -1,0 +1,39 @@
+@startuml
+class Usuario{
+- idUsuario : int
+- correo : String
+- nombreUsuario : String
+- publicaciones : String
+- numSeguidores : int
+- publicar () : void
+- comentar () : void
+- unirseAGrupo() : void
+- seguirUsuario() : void
+}
+
+class Grupo {
+    - idGrupo : int
+    - descripcion : String
+    - numMiembros : int
+}
+
+class Publicacion {
+    - contenido : String
+    - fecha : date
+      }
+
+class Comentario {
+    - contenido : String
+    - fecha : date
+}
+
+class Estudiante extends Usuario
+class Docente extends Usuario
+class Egresado extends Usuario
+
+Usuario "1"-- "*" Comentario : escribe
+Usuario "1"-- "*" Publicacion : realiza
+Usuario "*"-- "*" Grupo : pertenece
+Publicacion "1"-- "*" Comentario : tiene
+
+@enduml

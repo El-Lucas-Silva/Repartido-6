@@ -1,0 +1,42 @@
+@startuml
+class Paciente{
+- idPaciente : int
+- nombrePaciente : String
+- edad : int
+- agregarPaciente () : void
+}
+
+class Medico {
+- idMedico : int
+- nombreMedico : String
+- edad : int
+- agregarMedico() : void
+}
+
+class Turno{
+- idTurno : int
+- fecha : date
+- crearTurno () : int
+}
+
+class Area{
+- idArea : int
+- tipoDeArea : String
+- registrarArea () : void
+- asignarArea () : void
+}
+
+class Historial{
+- idHistorial : int
+- acontecimiento : String
+- registrarHistorial () : void
+}
+
+class Cirujano extends Medico
+class Clinico extends Medico
+
+Paciente "1"-- "1" Historial : tiene
+Paciente "1"-- "*" Turno : tiene
+Turno "*" -- "*" Medico : tiene
+Medico "1" -- "1" Area : Pertenece
+@enduml

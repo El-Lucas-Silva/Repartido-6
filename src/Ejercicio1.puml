@@ -1,0 +1,14 @@
+@startuml
+class Contacto{
+- nombre : String
+- telefono : int
+- correo : String
+}
+
+class Etiqueta{
+- amigo : String
+- familiar : String
+- compañeroDeTrabajo : String
+}
+Contacto "*"-- "*" Etiqueta : tiene
+@enduml

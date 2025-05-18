@@ -1,0 +1,31 @@
+@startuml
+'Ejemplo de UML dado en clase'
+class Vehiculo{
+- modelo : String
+- marca : String
+- anio : int
+
++ acelerar() : void
++ cargaCombustible (int litrosNafta) : int
+}
+
+class Moto extends Vehiculo
+class Auto extends Vehiculo{
+- capacidad : int
+- puertas : int
+}
+class Camion extends Vehiculo
+
+class Duenio{
+- ci : int
+-nombre : String
+
++ conducir () : void
+}
+
+class Seguro {
+}
+Duenio "1"-- "*" Vehiculo : tiene
+
+Vehiculo "1"--"1" Seguro : tiene
+@enduml

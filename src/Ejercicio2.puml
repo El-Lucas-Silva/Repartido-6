@@ -1,0 +1,31 @@
+@startuml
+class Cliente{
+- idCliente : int
+- edad : int
+- nombreCliente : String
+- realizarPedido () : void
+}
+
+class Producto {
+- codigoProducto : int
+- precio : int
+- nombreProducto : String
+- agregarProducto() : void
+}
+
+class Pedido{
+- idPedido : int
+- fecha : int
+- calcularTotal () : int
+}
+
+class Cantidad{
+- cantidad : int
+- subtotal : int
+- calcularSubtotal() : void
+}
+
+Cliente "1"-- "*" Pedido : hace
+Pedido "*"-- "*" Cantidad : tiene
+Producto "*" -- "*" Cantidad : tiene
+@enduml
