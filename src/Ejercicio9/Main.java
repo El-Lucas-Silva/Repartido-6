@@ -1,3 +1,5 @@
+//Clase Producto con metodos para vender y reponer stock.
+//(TERMINADO)
 package Ejercicio9;
 
 public class Main {
