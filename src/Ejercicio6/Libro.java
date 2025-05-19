@@ -7,15 +7,15 @@ public class Libro {
 
     private int anio;
 
-    //private int fecha; _EJ Crear cosos que el usuario no deba ingresar EJ_
-
     //Constructor
     public Libro (String titulo, String autor, int anio){
         this.titulo = titulo;
         this.autor = autor;
         if (anio < 2025){System.out.println("El año no puede ser menor que el actual [2025]");}
-        else{this.anio = anio;}
-        //this.fecha = 2025 _Crear cosos que el usuario no deba ingresar EJ_
+        else{
+            System.out.println("Libro ingresado correctamente!");
+            this.anio = anio;
+        }
     }
 
     //__________Getters y Setters__________
